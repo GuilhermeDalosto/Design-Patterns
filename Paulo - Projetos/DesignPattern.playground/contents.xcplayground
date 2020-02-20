@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='rendered'>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
     <pages>
         <page name='Facade'/>
         <page name='Builder'/>
@@ -13,5 +13,8 @@
         <page name='Prototype'/>
         <page name='Flyweight'/>
         <page name='Composite'/>
+        <page name='Multicast Delegate'/>
+        <page name='Chain of Resposibility'/>
+        <page name='Coordinator'/>
     </pages>
 </playground>

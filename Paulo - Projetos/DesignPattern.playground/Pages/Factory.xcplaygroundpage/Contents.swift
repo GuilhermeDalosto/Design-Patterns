@@ -9,6 +9,8 @@
  
  Ela é separada em duas partes: A “factory" que cria os objetos e a classe dos produtos que são os objetos criados
  
+ A função principal do Factory não é criar o produto e sim executar as ações do produto. Exemplo: Supomos que somos uma exmpresa de transporte e contratamos um terceiro. Recebemos um produto e contratamos essa empresa para transportá-lo, o que queremos é o transporte em si e não o veículo que será utilizado.
+ 
  ## Code Example
  */
 import XCTest
