@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
+    <pages>
+        <page name='Facade'/>
+        <page name='Builder'/>
+        <page name='Strategy'/>
+        <page name='Observer'/>
+        <page name='Adapter'/>
+        <page name='Memento'/>
+        <page name='Factory'/>
+        <page name='Iterator'/>
+        <page name='State'/>
+        <page name='Prototype'/>
+        <page name='Flyweight'/>
+        <page name='Composite'/>
+        <page name='Multicast Delegate'/>
+        <page name='Chain of Resposibility'/>
+        <page name='Coordinator'/>
+    </pages>
+</playground>
