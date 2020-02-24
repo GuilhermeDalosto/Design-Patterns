@@ -28,7 +28,7 @@ protocol HumanoidStrengthPresenterProtocol {
     /// The presenter will fetch data from the Interactor thru implementing the Interactor fetch function.
     func fetch(objectFor view: HumanoidStrengthViewProtocol)
     /// The Interactor will inform the Presenter a successful fetch.
-    func interactor(_ interactor: HumanoidStrengthInteractorProtocol, didFetch object: StrengthEntity.StrengthData)
+    func interactor(_ interactor: HumanoidStrengthInteractorProtocol?, didFetch object: StrengthEntity.StrengthData)
 //    /// The Interactor will inform the Presenter a failed fetch.
 //    func interactor(_ interactor: HumanoidStrengthInteractorProtocol, didFailWith error: Error)
 }

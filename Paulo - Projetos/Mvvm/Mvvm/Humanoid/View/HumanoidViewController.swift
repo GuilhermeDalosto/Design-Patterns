@@ -1,19 +1,18 @@
 //
-//  HumanoidView.swift
-//  Viper
+//  HumanoidViewController.swift
+//  Mvvm
 //
-//  Created Paulo Ricardo on 2/22/20.
+//  Created by Paulo Ricardo on 2/24/20.
 //  Copyright © 2020 Paulo Ricardo. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 /// Humanoid Module View
-class HumanoidView: UIViewController {
+class HumanoidViewController: UIViewController {
     
-    private let ui = HumanoidViewUI()
-    private var presenter: HumanoidPresenterProtocol!
-    private var object: HumanoidEntity?
+    private var viewModel: HumanoidViewModel!
     // MARK: - Outlets
     // Strength:
     @IBOutlet var staticStrLabel: UILabel!
@@ -30,10 +29,42 @@ class HumanoidView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = HumanoidPresenter(view: self)
+        viewModel = HumanoidViewModel()
         
         // Informs the Presenter that the View is ready to receive data.
-        presenter.fetch(objectFor: self)
+        viewModel.didLoad(view: self)
+        
+        // É a View quem determina quando vai precisar usar os dados requisitados.
+        self.setStrength()
+        self.setInte()
+        self.setHuman()
+    }
+    
+    
+    func setStrength() {
+        let strengthView = viewModel.getStrength()
+        
+        iconStr.image = strengthView.icon
+        staticStrLabel.text = strengthView.staticStr
+        eccentricStrLabel.text = strengthView.eccentricStr
+        concentricStrLabel.text = strengthView.concentricStr
+    }
+    
+    
+    func setInte() {
+        let intelligenceView = viewModel.getIntelligence()
+        
+        iconInt.image = intelligenceView.icon
+        technologicalIntLabel.text = intelligenceView.technological
+        healthIntLabel.text = intelligenceView.health
+        languageIntLabel.text = intelligenceView.language
+    }
+    
+    
+    func setHuman() {
+        let humanoidView = viewModel.getHumanoid()
+        
+        idHumLabel.text = humanoidView.id
     }
     
     
@@ -94,9 +125,9 @@ class HumanoidView: UIViewController {
     //
     @IBAction func save(_ sender: Any) {
         
-        let humanoid = HumanoidEntity.HumanoidView(id: "8", strength: StrengthEntity.StrengthView(staticStr: staticStrLabel.text!, eccentricStr: eccentricStrLabel.text!, concentricStr: concentricStrLabel.text!, icon: iconStr.image!), intelligence: IntelligenceEntity.IntelligenceView(technological: technologicalIntLabel.text!, health: healthIntLabel.text!, language: languageIntLabel.text!, icon: iconInt.image!))
+        let _ = HumanoidModel.HumanoidView(id: "8", strength: StrengthModel.StrengthView(staticStr: staticStrLabel.text!, eccentricStr: eccentricStrLabel.text!, concentricStr: concentricStrLabel.text!, icon: iconStr.image!), intelligence: IntelligenceModel.IntelligenceView(technological: technologicalIntLabel.text!, health: healthIntLabel.text!, language: languageIntLabel.text!, icon: iconInt.image!))
         
-        presenter.store(humanoid: humanoid)
+        viewModel.storeHumanoid()
     }
     
     // MARK: - View more actions (Router)
@@ -104,7 +135,7 @@ class HumanoidView: UIViewController {
     //
     @IBAction func viewMoreStr(_ sender: Any) {
         let moduleName = Constants.ModuleNames.strength
-        presenter.showModule(moduleName, parentView: self)
+        viewModel.showModule(moduleName, parentView: self)
     }
     
     // MARK: - View more actions (Router)
@@ -112,30 +143,6 @@ class HumanoidView: UIViewController {
     //
     @IBAction func viewMoreInt(_ sender: Any) {
         let moduleName = Constants.ModuleNames.intelligence
-        presenter.showModule(moduleName, parentView: self)
-    }
-}
-
-// MARK: - extending HumanoidView to implement it's protocol
-extension HumanoidView: HumanoidViewProtocol {
-    
-    func set(setIntelligence object: IntelligenceEntity.IntelligenceView) {
-        iconInt.image = object.icon
-        technologicalIntLabel.text = String(object.technological)
-        healthIntLabel.text = String(object.health)
-        languageIntLabel.text = String(object.language)
-    }
-    
-    
-    func set(setStrength object: StrengthEntity.StrengthView) {
-        iconStr.image = object.icon
-        staticStrLabel.text = object.staticStr
-        eccentricStrLabel.text = object.eccentricStr
-        concentricStrLabel.text = object.concentricStr
-    }
-    
-    
-    func set(setHum object: HumanoidEntity.HumanoidView) {
-        idHumLabel.text = object.id
+        viewModel.showModule(moduleName, parentView: self)
     }
 }

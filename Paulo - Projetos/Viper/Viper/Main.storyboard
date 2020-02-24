@@ -364,10 +364,10 @@
                         <viewLayoutGuide key="safeArea" id="jpK-9Z-utK"/>
                     </view>
                     <connections>
-                        <outlet property="healthLabel" destination="Bxv-jb-oMa" id="FaB-4W-YaG"/>
-                        <outlet property="icon" destination="6H1-aZ-iAt" id="RXa-u5-9hU"/>
-                        <outlet property="languageLabel" destination="sWQ-TV-jM8" id="AId-ng-sRU"/>
-                        <outlet property="technologicalLabel" destination="QwR-Rs-nrD" id="rBL-Hf-f8N"/>
+                        <outlet property="healthLabel" destination="Bxv-jb-oMa" id="aPz-zD-Ats"/>
+                        <outlet property="icon" destination="6H1-aZ-iAt" id="7Kc-Ej-G1c"/>
+                        <outlet property="languageLabel" destination="sWQ-TV-jM8" id="Qfn-BR-XcJ"/>
+                        <outlet property="technologicalLabel" destination="QwR-Rs-nrD" id="K6M-93-crS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4de-PF-fcD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

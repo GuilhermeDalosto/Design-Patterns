@@ -31,7 +31,7 @@ extension HumanoidStrengthPresenter: HumanoidStrengthPresenterProtocol {
     }
     
     // Chamado pelo interactor
-    func interactor(_ interactor: HumanoidStrengthInteractorProtocol, didFetch object: StrengthEntity.StrengthData) {
+    func interactor(_ interactor: HumanoidStrengthInteractorProtocol?, didFetch object: StrengthEntity.StrengthData) {
         
         let strengthView = StrengthEntity.StrengthView(staticStr: String(object.staticStr), eccentricStr: String(object.eccentricStr), concentricStr: String(object.concentricStr), icon: UIImage(data: object.icon)!)
         

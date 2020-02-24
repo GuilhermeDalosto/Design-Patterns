@@ -131,12 +131,12 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		23199B8D2403035000F6D2D2 /* Contants */ = {
+		23199B8D2403035000F6D2D2 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
 				23199B8E240303C400F6D2D2 /* Constants.swift */,
 			);
-			path = Contants;
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		232F4C322401977B0077D92F /* HumanoidGeneral */ = {
@@ -146,6 +146,7 @@
 				232F4C35240198640077D92F /* Presenter */,
 				232F4C362401987C0077D92F /* Interactor */,
 				232F4C382401988C0077D92F /* Router */,
+				23E63369240446AA00990BAE /* Entity */,
 				232F4C1E2401822F0077D92F /* HumanoidViewUI.swift */,
 			);
 			path = HumanoidGeneral;
@@ -172,8 +173,8 @@
 		232F4C362401987C0077D92F /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				232F4C1F2401822F0077D92F /* HumanoidInteractorProtocol.swift */,
 				232F4C232401822F0077D92F /* HumanoidInteractor.swift */,
+				232F4C1F2401822F0077D92F /* HumanoidInteractorProtocol.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -210,14 +211,6 @@
 				23199B8C2402EC8F00F6D2D2 /* Entity */,
 			);
 			path = Intelligence;
-			sourceTree = "<group>";
-		};
-		233EF1B32400A8C000B434CD /* Humanoid */ = {
-			isa = PBXGroup;
-			children = (
-				232F4C272401822F0077D92F /* HumanoidEntity.swift */,
-			);
-			path = Humanoid;
 			sourceTree = "<group>";
 		};
 		233EF1C42401336C00B434CD /* Modules */ = {
@@ -297,9 +290,8 @@
 		23ADC3AF240097460047A954 /* Viper */ = {
 			isa = PBXGroup;
 			children = (
-				23199B8D2403035000F6D2D2 /* Contants */,
+				23199B8D2403035000F6D2D2 /* Constants */,
 				233EF1C42401336C00B434CD /* Modules */,
-				23ADC3C42400A7050047A954 /* Entities */,
 				23ADC3B0240097460047A954 /* AppDelegate.swift */,
 				23ADC3B2240097460047A954 /* SceneDelegate.swift */,
 				23ADC3B9240097490047A954 /* Assets.xcassets */,
@@ -310,12 +302,12 @@
 			path = Viper;
 			sourceTree = "<group>";
 		};
-		23ADC3C42400A7050047A954 /* Entities */ = {
+		23E63369240446AA00990BAE /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				233EF1B32400A8C000B434CD /* Humanoid */,
+				232F4C272401822F0077D92F /* HumanoidEntity.swift */,
 			);
-			path = Entities;
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

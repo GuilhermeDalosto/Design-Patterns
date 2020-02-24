@@ -1,15 +1,16 @@
 //
-//  HumanoidIntelligenceEntity.swift
-//  Viper
+//  IntelligenceModel.swift
+//  Mvvm
 //
-//  Created Paulo Ricardo on 2/23/20.
+//  Created by Paulo Ricardo on 2/24/20.
 //  Copyright © 2020 Paulo Ricardo. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-/// HumanoidIntelligence Module Entity
-enum IntelligenceEntity {
+
+enum IntelligenceModel {
     
     struct IntelligenceView {
         var technological: String

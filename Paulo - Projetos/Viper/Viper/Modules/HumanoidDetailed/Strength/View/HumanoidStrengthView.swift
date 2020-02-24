@@ -24,10 +24,6 @@ class HumanoidStrengthView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = HumanoidStrengthPresenter(view: self)
-        
-        // Informs the Presenter that the View is ready to receive data.
-        presenter.fetch(objectFor: self)
     }
 }
 
