@@ -7,15 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BookShelfController.h"
+
+#import "AlertRouter.h"
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BookShelfRouter : NSObject
+@interface BookShelfRouter : NSObject <AlertRouter>
 
-//@property BookShelfController* bookShelf;
+@property UIViewController* controller;
 
-- (void) switchView : (NSString*) segueName;
 
 @end
 

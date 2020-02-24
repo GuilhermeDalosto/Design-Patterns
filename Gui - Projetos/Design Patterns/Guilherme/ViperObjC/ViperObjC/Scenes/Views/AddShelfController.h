@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "BookShelfInteractor.h"
+#import "BookShelfPresenter.h"
+#import "BookShelfRouter.h"
+#import "BSInteractorFetcherProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,9 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextField *name;
 @property (weak, nonatomic) IBOutlet UITextField *author;
 @property (weak, nonatomic) IBOutlet UITextField *identifier;
-
+@property BookShelfPresenter* presenter;
+@property BookShelfRouter* router;
 @property (nonatomic,weak) id<FetchBookShelf> delegate;
-@property  BookShelfInteractor* interactor;
+
 
 - (void) send;
 - (IBAction)AddBook:(UIButton *)sender;

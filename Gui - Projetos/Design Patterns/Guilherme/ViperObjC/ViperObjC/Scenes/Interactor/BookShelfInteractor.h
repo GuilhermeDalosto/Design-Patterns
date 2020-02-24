@@ -9,21 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "BookModel.h"
 #import "BSInteractorFetcherProtocol.h"
-#import "BookShelfController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BookShelfInteractor : NSObject <FetchBookShelf>
 
+@property (nonatomic) struct Book selectedBook;
 @property (nonatomic,weak) id<FetchBookShelf> delegate;
 
-@property NSString* name;
 
-- (void) sendBook : (struct Book) book;
-- (void) addBook : (struct Book) book;
-- (void) removeBook: (struct Book) book;
-- (void) removeBookById: (int) bookId;
-- (void) removeBookByName: (NSString*) bookName;
+- (void) sendBook;
+- (void) printBook:(struct Book)book;
 
 @end
 

@@ -7,22 +7,16 @@
 //
 #import <UIKit/UIKit.h>
 #import "BookModel.h"
-#import "BookShelfInteractor.h"
-#import "BookShelfRouter.h"
-#import "BookShelfPresenter.h"
 #import "BSInteractorFetcherProtocol.h"
-#import "AddShelfController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BookShelfController : UIViewController <FetchBookShelf>
 
-@property AddShelfController* addShelfController;
-
-@property (retain) BookShelfInteractor* interactor;
-//@property BookShelfRouter* router;
-@property BookShelfPresenter* presenter;
-
+@property (nonatomic,weak) id<FetchBookShelf> delegate;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *author;
+@property (weak, nonatomic) IBOutlet UILabel *identifier;
 
 
 @end

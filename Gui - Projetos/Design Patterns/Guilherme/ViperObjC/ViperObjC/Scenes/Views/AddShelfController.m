@@ -14,6 +14,14 @@
 
 - (void)viewDidLoad{
     
+    _presenter = [[BookShelfPresenter alloc] init];
+    _router = [[BookShelfRouter alloc]init];
+    
+    _presenter.router = _router;
+    self.delegate = _presenter;
+    
+    _router.controller = self;
+    
 }
 
 - (void) send {
@@ -22,8 +30,9 @@
     book.identifier = [[self identifier] text];
     book.name = [[self name]text];
     
-    self.interactor.delegate = self;
-    [self.interactor sendBook:book];
+    [self.delegate shareBookShelf:book];
+    
+    
 }
 
 - (IBAction)AddBook:(UIButton *)sender {
