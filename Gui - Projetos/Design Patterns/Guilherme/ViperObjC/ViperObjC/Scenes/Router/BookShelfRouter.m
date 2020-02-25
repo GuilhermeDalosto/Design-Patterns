@@ -11,10 +11,8 @@
 @implementation BookShelfRouter
 
 
-//
-//- (void) switchView : (NSString) segueName{
-//    [[self bookShelf]performSegueWithIdentifier:segueName sender:nil ]
-//}
-
+- (void)viewChange:(nonnull UIViewController *)vc {
+    [_controller performSegueWithIdentifier:@"toBookShelf" sender:nil];
+}
 
 @end

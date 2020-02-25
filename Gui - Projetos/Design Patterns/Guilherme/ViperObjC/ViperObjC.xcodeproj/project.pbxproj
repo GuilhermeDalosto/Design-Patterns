@@ -20,6 +20,7 @@
 		AC3B771F23FFE66400211C10 /* StateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3B771E23FFE66400211C10 /* StateMachine.m */; };
 		AC3B77212400513900211C10 /* BSInteractorFetcherProtocol.h in Sources */ = {isa = PBXBuildFile; fileRef = AC3B77202400513900211C10 /* BSInteractorFetcherProtocol.h */; };
 		AC3B77242400680300211C10 /* AddShelfController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3B77232400680300211C10 /* AddShelfController.m */; };
+		AC48E7242401551100020B35 /* BookShelf.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC48E7232401551100020B35 /* BookShelf.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		AC3B77202400513900211C10 /* BSInteractorFetcherProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSInteractorFetcherProtocol.h; sourceTree = "<group>"; };
 		AC3B77222400680300211C10 /* AddShelfController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddShelfController.h; sourceTree = "<group>"; };
 		AC3B77232400680300211C10 /* AddShelfController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddShelfController.m; sourceTree = "<group>"; };
+		AC48E7232401551100020B35 /* BookShelf.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookShelf.storyboard; sourceTree = "<group>"; };
+		AC48E7252401568000020B35 /* AlertRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertRouter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +84,13 @@
 			children = (
 				AC3B771C23FF69E600211C10 /* State Machine */,
 				AC3B770223FF604200211C10 /* Scenes */,
+				AC3B770723FF608500211C10 /* Entity */,
 				AC3B76E823FF600700211C10 /* AppDelegate.h */,
 				AC3B76E923FF600700211C10 /* AppDelegate.m */,
 				AC3B76EB23FF600700211C10 /* SceneDelegate.h */,
 				AC3B76EC23FF600700211C10 /* SceneDelegate.m */,
 				AC3B76F123FF600700211C10 /* Main.storyboard */,
+				AC48E7232401551100020B35 /* BookShelf.storyboard */,
 				AC3B76F423FF600A00211C10 /* Assets.xcassets */,
 				AC3B76F623FF600A00211C10 /* LaunchScreen.storyboard */,
 				AC3B76F923FF600A00211C10 /* Info.plist */,
@@ -97,10 +102,10 @@
 		AC3B770223FF604200211C10 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				AC48E7222401490500020B35 /* Protocol */,
 				AC3B770323FF606100211C10 /* Views */,
 				AC3B770523FF607100211C10 /* Interactor */,
 				AC3B770823FF608E00211C10 /* Presenter */,
-				AC3B770723FF608500211C10 /* Entity */,
 				AC3B770623FF607B00211C10 /* Router */,
 			);
 			path = Scenes;
@@ -122,7 +127,6 @@
 			children = (
 				AC3B770E23FF616300211C10 /* BookShelfInteractor.h */,
 				AC3B770F23FF616300211C10 /* BookShelfInteractor.m */,
-				AC3B77202400513900211C10 /* BSInteractorFetcherProtocol.h */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -160,6 +164,15 @@
 				AC3B771E23FFE66400211C10 /* StateMachine.m */,
 			);
 			path = "State Machine";
+			sourceTree = "<group>";
+		};
+		AC48E7222401490500020B35 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				AC3B77202400513900211C10 /* BSInteractorFetcherProtocol.h */,
+				AC48E7252401568000020B35 /* AlertRouter.h */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC48E7242401551100020B35 /* BookShelf.storyboard in Resources */,
 				AC3B76F823FF600A00211C10 /* LaunchScreen.storyboard in Resources */,
 				AC3B76F523FF600A00211C10 /* Assets.xcassets in Resources */,
 				AC3B76F323FF600700211C10 /* Main.storyboard in Resources */,

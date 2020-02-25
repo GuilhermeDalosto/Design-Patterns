@@ -13,41 +13,24 @@
 
 
 
-- (void) sendBook : (struct Book) book {
+- (void) sendBook{
     
-    _bookShelfController.delegate = self;
-    [_bookShelfController printBook: book];
+    [self.delegate shareBookShelf:_selectedBook];
+    
+}
+
+- (void)printBook:(struct Book)book {
+    
+}
+
+
+- (void)shareBookShelf:(struct Book)book {
+    _selectedBook = book;
+    [self sendBook];
+    
 }
 
 
 
 
-//
-//- (void) addBook: (struct Book) book{
-//    [storageBooks addObject:book]
-//}
-//
-//- (void) removeBook: (struct Book) book{
-//    [storageBooks removeObject:book];
-//}
-//
-//- (void) removeBookById: (int) bookId{
-//
-//    for (int i = 0;i<storageBooks.count;i++){
-//        if (storageBooks[i].id == bookId){
-//            [storageBooks removeObject:storageBooks[i]];
-//            return
-//        }
-//    }
-//}
-//
-//- (void) removeBookByName: (NSString*) bookName{
-//    for (int i = 0;i<storageBooks.count;i++){
-//        if (storageBooks[i].name == bookName){
-//            [storageBooks removeObject:storageBooks[i]];
-//            return
-//        }
-//    }
-//}
-//
 @end
