@@ -11,30 +11,41 @@ import UIKit
 /// Humanoid Module Router (aka: Wireframe)
 class HumanoidRouter: HumanoidRouterProtocol {
     
-    weak var viewController: HumanoidView!
+    var viewController: HumanoidView!
     
-    func showStrengthModule() {
-        
-        // Aqui poderíamos passa informações de o Module
-        // atual para o que estamos inicializando
-        let view = viewController.storyboard?.instantiateViewController(withIdentifier: Constants.ControllerName.strength) as! HumanoidStrengthView
-        
-        // Transferencia de dados
-        let strength = StrengthEntity.StrengthView(staticStr: viewController.staticStrLabel.text!, eccentricStr: viewController.eccentricStrLabel.text!, concentricStr: viewController.concentricStrLabel.text!, icon: viewController.iconStr.image!)
-        self.viewController.show(view, sender: nil)
-        view.set(object: strength)
+    var navigationController: UINavigationController!
+    
+    //    weak var viewController: HumanoidView!
+    
+    
+    init(navigationController: UINavigationController, vc: HumanoidView) {
+        self.navigationController = navigationController
+        self.viewController = vc
     }
     
     
-    func showIntelligenceModule() {
+    func presentStrengthModule(fromViewController: HumanoidView, toViewController: HumanoidStrengthView, animated: Bool) {
         
-        // Aqui poderíamos passa informações de o Module
+        // Transferencia de dados de um Module para outro
+        let strength = StrengthEntity.StrengthView(staticStr: fromViewController.staticStrLabel.text!, eccentricStr: fromViewController.eccentricStrLabel.text!, concentricStr: fromViewController.concentricStrLabel.text!, icon: fromViewController.iconStr.image!)
+        
+        toViewController.sendData(object: strength)
+        navigationController.pushViewController(toViewController, animated: animated)
+    }
+    
+    
+    func presentIntelligenceModule(fromViewController: HumanoidView, toViewController: HumanoidIntelligenceView, animated: Bool) {
+        
+        // Aqui poderíamos passar informações do Module
         // atual para o que estamos inicializando
-        let view = viewController.storyboard?.instantiateViewController(withIdentifier: Constants.ControllerName.intelligence) as! HumanoidIntelligenceView
+        //        let intelligence = IntelligenceEntity.IntelligenceView(technological: viewController.technologicalIntLabel.text!, health: viewController.healthIntLabel.text!, language: viewController.languageIntLabel.text!, icon: viewController.iconInt.image!)
+        navigationController.pushViewController(toViewController, animated: animated)
+        //        view.set(object: intelligence)
+    }
+    
+    
+    func presentHumanModule(_ viewController: HumanoidView, animated: Bool) {
         
-        
-//        let intelligence = IntelligenceEntity.IntelligenceView(technological: viewController.technologicalIntLabel.text!, health: viewController.healthIntLabel.text!, language: viewController.languageIntLabel.text!, icon: viewController.iconInt.image!)
-        self.viewController.show(view, sender: nil)
-//        view.set(object: intelligence)
+        navigationController.pushViewController(viewController, animated: animated)
     }
 }

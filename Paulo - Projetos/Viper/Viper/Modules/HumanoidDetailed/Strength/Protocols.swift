@@ -17,8 +17,16 @@ import Foundation
 /// HumanoidStrength Module View Protocol
 protocol HumanoidStrengthViewProtocol: class {
     // Update UI with value returned.
-    /// Set the view Object of Type HumanoidStrengthEntity
+    /// Aqui setamos os dados de uma Vc que já retornou o seu DidLoad()
     func set(object: StrengthEntity.StrengthView)
+    
+    /// Usamos esse método para passar os dados da Router para a Vc
+    func set()
+    
+    /// Usamos essa função no Router quando queremos senviar dados de um Module para outro.
+    /// Quando essa Vc ainda não retornou o DidLoad()
+    /// - Parameter object: Dado que está vindo de outro Module.
+    func sendData(object: StrengthEntity.StrengthView)
 }
 
 

@@ -20,7 +20,7 @@ The adapter pattern allows incompatible types to work together. It involves four
 import UIKit
 
 // MARK: - Legacy Object
-// Classe Third-party que não pode ser alterada.
+/// Classe Third-party que não pode ser alterada.
 public  class GoogleAuthenticator {
     public func login(email: String, password: String, completion: @escaping (GoogleUser?, Error?) -> Void) {
 

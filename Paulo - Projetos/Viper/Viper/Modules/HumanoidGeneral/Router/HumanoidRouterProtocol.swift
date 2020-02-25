@@ -14,8 +14,16 @@ protocol HumanoidRouterProtocol {
     var viewController: HumanoidView! { get set }
     // Show Details of Entity Object coming from ParentView Controller.
 //     func showDetailsFor(object: HumanoidEntity, parentViewController viewController: UIViewController)
+    var navigationController: UINavigationController! { get set }
     
-    func showStrengthModule()
+//    func showStrengthModule()
+//
+//    func showIntelligenceModule()
     
-    func showIntelligenceModule()
+    
+    func presentHumanModule(_ viewController: HumanoidView, animated: Bool)
+    
+    func presentIntelligenceModule(fromViewController: HumanoidView, toViewController: HumanoidIntelligenceView, animated: Bool)
+    
+    func presentStrengthModule(fromViewController: HumanoidView, toViewController: HumanoidStrengthView, animated: Bool)
 }

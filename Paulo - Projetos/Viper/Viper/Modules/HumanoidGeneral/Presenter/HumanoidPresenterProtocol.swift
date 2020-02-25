@@ -25,5 +25,5 @@ protocol HumanoidPresenterProtocol {
     
     
     // Função chamado pela View quando for mudar de Module
-    func showModule(_ constantModuleName: String, parentView: HumanoidView)
+    func showModule(_ constantModuleName: String)
 }

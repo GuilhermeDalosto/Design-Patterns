@@ -30,8 +30,7 @@ class HumanoidView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = HumanoidPresenter(view: self)
-        
+        presenter = HumanoidPresenter(view: self, navController: navigationController!)
         // Informs the Presenter that the View is ready to receive data.
         presenter.fetch(objectFor: self)
     }
@@ -104,7 +103,8 @@ class HumanoidView: UIViewController {
     //
     @IBAction func viewMoreStr(_ sender: Any) {
         let moduleName = Constants.ModuleNames.strength
-        presenter.showModule(moduleName, parentView: self)
+        presenter.showModule(moduleName)
+//        delegate?.didPressNext(buttonName: Constants.ControllerName.strength)
     }
     
     // MARK: - View more actions (Router)
@@ -112,7 +112,8 @@ class HumanoidView: UIViewController {
     //
     @IBAction func viewMoreInt(_ sender: Any) {
         let moduleName = Constants.ModuleNames.intelligence
-        presenter.showModule(moduleName, parentView: self)
+        presenter.showModule(moduleName)
+//        delegate?.didPressNext(buttonName: Constants.ControllerName.intelligence)
     }
 }
 
@@ -137,5 +138,15 @@ extension HumanoidView: HumanoidViewProtocol {
     
     func set(setHum object: HumanoidEntity.HumanoidView) {
         idHumLabel.text = object.id
+    }
+}
+
+
+extension HumanoidView {
+    
+    class func instantiate() -> HumanoidView {
+        /*Como nessa view tudo é inicializado no didLoad não fazemos nada aqui.*/
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(identifier: Constants.ControllerName.humanoid)
     }
 }

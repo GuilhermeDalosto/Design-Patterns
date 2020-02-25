@@ -40,3 +40,13 @@ extension HumanoidIntelligenceView: HumanoidIntelligenceViewProtocol {
         languageLabel.text = object.language
     }
 }
+
+
+extension HumanoidIntelligenceView {
+    
+    class func instantiate() -> HumanoidIntelligenceView {
+        /*Como nessa view tudo é inicializado no didLoad não fazemos nada aqui.*/
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(identifier: Constants.ControllerName.intelligence)
+    }
+}
