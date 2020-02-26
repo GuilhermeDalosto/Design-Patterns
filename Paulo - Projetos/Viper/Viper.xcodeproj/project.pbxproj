@@ -34,7 +34,7 @@
 		23822E122402D42A00BB0C22 /* HumanoidStrengthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23822E082402D42A00BB0C22 /* HumanoidStrengthInteractor.swift */; };
 		23822E142402D42A00BB0C22 /* HumanoidStrengthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23822E0A2402D42A00BB0C22 /* HumanoidStrengthView.swift */; };
 		23822E162402D42A00BB0C22 /* StrengthEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23822E0C2402D42A00BB0C22 /* StrengthEntity.swift */; };
-		2387587D240527DF00228CE0 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2387587C240527DF00228CE0 /* Coordinator.swift */; };
+		2387587D240527DF00228CE0 /* HumanoidCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2387587C240527DF00228CE0 /* HumanoidCoordinator.swift */; };
 		238758812405349C00228CE0 /* CoordinatorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238758802405349C00228CE0 /* CoordinatorProtocols.swift */; };
 		23ADC3B1240097460047A954 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ADC3B0240097460047A954 /* AppDelegate.swift */; };
 		23ADC3B3240097460047A954 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ADC3B2240097460047A954 /* SceneDelegate.swift */; };
@@ -70,7 +70,7 @@
 		23822E082402D42A00BB0C22 /* HumanoidStrengthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanoidStrengthInteractor.swift; sourceTree = "<group>"; };
 		23822E0A2402D42A00BB0C22 /* HumanoidStrengthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanoidStrengthView.swift; sourceTree = "<group>"; };
 		23822E0C2402D42A00BB0C22 /* StrengthEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrengthEntity.swift; sourceTree = "<group>"; };
-		2387587C240527DF00228CE0 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		2387587C240527DF00228CE0 /* HumanoidCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanoidCoordinator.swift; sourceTree = "<group>"; };
 		238758802405349C00228CE0 /* CoordinatorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocols.swift; sourceTree = "<group>"; };
 		23ADC3AD240097460047A954 /* Viper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23ADC3B0240097460047A954 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				23199B8E240303C400F6D2D2 /* Constants.swift */,
-				238758802405349C00228CE0 /* CoordinatorProtocols.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -189,7 +188,8 @@
 			children = (
 				232F4C212401822F0077D92F /* HumanoidRouter.swift */,
 				232F4C262401822F0077D92F /* HumanoidRouterProtocol.swift */,
-				2387587C240527DF00228CE0 /* Coordinator.swift */,
+				2387587C240527DF00228CE0 /* HumanoidCoordinator.swift */,
+				238758802405349C00228CE0 /* CoordinatorProtocols.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -405,7 +405,7 @@
 				232F4C2D2401822F0077D92F /* HumanoidInteractor.swift in Sources */,
 				23199B802402EC5300F6D2D2 /* HumanoidIntelligencePresenter.swift in Sources */,
 				23822E162402D42A00BB0C22 /* StrengthEntity.swift in Sources */,
-				2387587D240527DF00228CE0 /* Coordinator.swift in Sources */,
+				2387587D240527DF00228CE0 /* HumanoidCoordinator.swift in Sources */,
 				232F4C2E2401822F0077D92F /* HumanoidViewProtocol.swift in Sources */,
 				23199B832402EC5300F6D2D2 /* HumanoidIntelligenceInteractor.swift in Sources */,
 				23822E142402D42A00BB0C22 /* HumanoidStrengthView.swift in Sources */,

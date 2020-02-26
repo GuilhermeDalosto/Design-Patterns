@@ -10,22 +10,19 @@ import Foundation
 import UIKit
 
 
-class Coordinator {
+class HumanoidCoordinator {
     
     let router: HumanoidRouter!
     
-    private lazy var linearViewControllers = [HumanoidStrengthView.instantiate(), HumanoidStrengthView.instantiate()]
+//    private lazy var linearViewControllers = [HumanoidStrengthView.instantiate(), HumanoidStrengthView.instantiate()]
     
     private lazy var namedViewControllers = [
         Constants.ModuleNames.intelligence : HumanoidIntelligenceView.instantiate(),
         Constants.ModuleNames.strength : HumanoidStrengthView.instantiate(),
         Constants.ModuleNames.humanoid : HumanoidView.instantiate()]
     
-//    private lazy var viewControllers = [router.viewController.storyboard?.instantiateViewController(identifier: Constants.ControllerName.intelligence), router.viewController.storyboard?.instantiateViewController(identifier: Constants.ControllerName.strength)]
-    
     /// View principal
     private lazy var humanoidView = HumanoidView.instantiate()
-    
     
     init(router: HumanoidRouter) {
         self.router = router
@@ -33,18 +30,9 @@ class Coordinator {
 }
 
 
-extension Coordinator: CoordinatorViewControllerDelegate {
+extension HumanoidCoordinator: CoordinatorNominalDelegate {
     
-    func didPressNext(_ vc: UIViewController) {
-//        if let nextVc = linearViewController(after: vc) {
-//            router.present(nextVc, animated: true)
-//            return
-//        }
-//        router.present(humanoidView, animated: true)
-    }
-    
-    
-    func didPressNext(_ constantModuleName: String) {
+    func present(_ constantModuleName: String) {
         switch constantModuleName {
         case Constants.ModuleNames.strength:
             router.presentStrengthModule(fromViewController: router.viewController, toViewController: namedViewControllers[Constants.ModuleNames.strength] as! HumanoidStrengthView, animated: true)
@@ -56,8 +44,9 @@ extension Coordinator: CoordinatorViewControllerDelegate {
     }
     
     
-    private func linearViewController(after controller: UIViewController) -> UIViewController? {
-        guard let index = linearViewControllers.firstIndex(where: { $0 === controller }), index < linearViewControllers.count - 1 else { return nil }
-        return linearViewControllers[index + 1]
-    }
+    /// Usamos quando estamos em modo linear do Coordinator
+//    private func linearViewController(after controller: UIViewController) -> UIViewController? {
+//        guard let index = linearViewControllers.firstIndex(where: { $0 === controller }), index < linearViewControllers.count - 1 else { return nil }
+//        return linearViewControllers[index + 1]
+//    }
 }

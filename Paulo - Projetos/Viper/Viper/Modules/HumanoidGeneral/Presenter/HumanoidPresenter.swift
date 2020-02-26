@@ -14,14 +14,14 @@ class HumanoidPresenter {
     weak private var _view: HumanoidViewProtocol?
     private var interactor: HumanoidInteractorProtocol
 //    private var wireframe: HumanoidRouterProtocol
-    var delegate: CoordinatorViewControllerDelegate?
+    var nominalCoordinatorDelegate: CoordinatorNominalDelegate?
     
     init(view: HumanoidViewProtocol, navController: UINavigationController) {
         self._view = view
         self.interactor = HumanoidInteractor()
         let router = HumanoidRouter(navigationController: navController, vc: _view as! HumanoidView)
         // Quando usamos coordinators, podemos decidir qual coordinator usar
-        self.delegate = Coordinator(router: router)
+        self.nominalCoordinatorDelegate = HumanoidCoordinator(router: router)
     }
 }
 
@@ -63,7 +63,7 @@ extension HumanoidPresenter: HumanoidPresenterProtocol {
     func showModule(_ constantModuleName: String) {
         // Aqui podemos ter alguma lógica para qual Module ir
         // Quando usamos coordinators, podemos decidir qual coordinator usar
-        delegate?.didPressNext(constantModuleName)
+        nominalCoordinatorDelegate?.present(constantModuleName)
         
 //        wireframe.viewController = parentView
 //        if constantModuleName == Constants.ModuleNames.intelligence {
