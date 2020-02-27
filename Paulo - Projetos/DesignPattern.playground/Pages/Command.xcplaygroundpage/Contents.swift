@@ -46,6 +46,7 @@ public class OpenCommand: DoorCommand {
     public override func execute() {
         print("opening the door...")
         door.isOpen = true
+        
     }
 }
 
