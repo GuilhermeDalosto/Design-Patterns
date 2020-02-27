@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC3B76EA23FF600700211C10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3B76E923FF600700211C10 /* AppDelegate.m */; };
+		AC3B76ED23FF600700211C10 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3B76EC23FF600700211C10 /* SceneDelegate.m */; };
+		AC3B76F323FF600700211C10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC3B76F123FF600700211C10 /* Main.storyboard */; };
+		AC3B76F523FF600A00211C10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC3B76F423FF600A00211C10 /* Assets.xcassets */; };
+		AC3B76F823FF600A00211C10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC3B76F623FF600A00211C10 /* LaunchScreen.storyboard */; };
+		AC3B76FB23FF600A00211C10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3B76FA23FF600A00211C10 /* main.m */; };
+		AC3B770D23FF611100211C10 /* BookShelfController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3B770C23FF611100211C10 /* BookShelfController.m */; };
+		AC3B771023FF616300211C10 /* BookShelfInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3B770F23FF616300211C10 /* BookShelfInteractor.m */; };
+		AC3B771323FF61EC00211C10 /* BookShelfPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3B771223FF61EC00211C10 /* BookShelfPresenter.m */; };
+		AC3B771823FF624900211C10 /* BookShelfRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3B771723FF624900211C10 /* BookShelfRouter.m */; };
+		AC3B771F23FFE66400211C10 /* StateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3B771E23FFE66400211C10 /* StateMachine.m */; };
+		AC3B77212400513900211C10 /* BSInteractorFetcherProtocol.h in Sources */ = {isa = PBXBuildFile; fileRef = AC3B77202400513900211C10 /* BSInteractorFetcherProtocol.h */; };
+		AC3B77242400680300211C10 /* AddShelfController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3B77232400680300211C10 /* AddShelfController.m */; };
+		AC48E7242401551100020B35 /* BookShelf.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC48E7232401551100020B35 /* BookShelf.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AC3B76E523FF600700211C10 /* ViperObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC3B76E823FF600700211C10 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AC3B76E923FF600700211C10 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AC3B76EB23FF600700211C10 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		AC3B76EC23FF600700211C10 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		AC3B76F223FF600700211C10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC3B76F423FF600A00211C10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC3B76F723FF600A00211C10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC3B76F923FF600A00211C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC3B76FA23FF600A00211C10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AC3B770B23FF611100211C10 /* BookShelfController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookShelfController.h; sourceTree = "<group>"; };
+		AC3B770C23FF611100211C10 /* BookShelfController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookShelfController.m; sourceTree = "<group>"; };
+		AC3B770E23FF616300211C10 /* BookShelfInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookShelfInteractor.h; sourceTree = "<group>"; };
+		AC3B770F23FF616300211C10 /* BookShelfInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookShelfInteractor.m; sourceTree = "<group>"; };
+		AC3B771123FF61EC00211C10 /* BookShelfPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookShelfPresenter.h; sourceTree = "<group>"; };
+		AC3B771223FF61EC00211C10 /* BookShelfPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookShelfPresenter.m; sourceTree = "<group>"; };
+		AC3B771623FF624900211C10 /* BookShelfRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookShelfRouter.h; sourceTree = "<group>"; };
+		AC3B771723FF624900211C10 /* BookShelfRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookShelfRouter.m; sourceTree = "<group>"; };
+		AC3B771923FF633D00211C10 /* BookModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookModel.h; sourceTree = "<group>"; };
+		AC3B771D23FFE66400211C10 /* StateMachine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StateMachine.h; sourceTree = "<group>"; };
+		AC3B771E23FFE66400211C10 /* StateMachine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StateMachine.m; sourceTree = "<group>"; };
+		AC3B77202400513900211C10 /* BSInteractorFetcherProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSInteractorFetcherProtocol.h; sourceTree = "<group>"; };
+		AC3B77222400680300211C10 /* AddShelfController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddShelfController.h; sourceTree = "<group>"; };
+		AC3B77232400680300211C10 /* AddShelfController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddShelfController.m; sourceTree = "<group>"; };
+		AC48E7232401551100020B35 /* BookShelf.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookShelf.storyboard; sourceTree = "<group>"; };
+		AC48E7252401568000020B35 /* AlertRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertRouter.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC3B76E223FF600700211C10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC3B76DC23FF600700211C10 = {
+			isa = PBXGroup;
+			children = (
+				AC3B76E723FF600700211C10 /* ViperObjC */,
+				AC3B76E623FF600700211C10 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC3B76E623FF600700211C10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC3B76E523FF600700211C10 /* ViperObjC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC3B76E723FF600700211C10 /* ViperObjC */ = {
+			isa = PBXGroup;
+			children = (
+				AC3B771C23FF69E600211C10 /* State Machine */,
+				AC3B770223FF604200211C10 /* Scenes */,
+				AC3B770723FF608500211C10 /* Entity */,
+				AC3B76E823FF600700211C10 /* AppDelegate.h */,
+				AC3B76E923FF600700211C10 /* AppDelegate.m */,
+				AC3B76EB23FF600700211C10 /* SceneDelegate.h */,
+				AC3B76EC23FF600700211C10 /* SceneDelegate.m */,
+				AC3B76F123FF600700211C10 /* Main.storyboard */,
+				AC48E7232401551100020B35 /* BookShelf.storyboard */,
+				AC3B76F423FF600A00211C10 /* Assets.xcassets */,
+				AC3B76F623FF600A00211C10 /* LaunchScreen.storyboard */,
+				AC3B76F923FF600A00211C10 /* Info.plist */,
+				AC3B76FA23FF600A00211C10 /* main.m */,
+			);
+			path = ViperObjC;
+			sourceTree = "<group>";
+		};
+		AC3B770223FF604200211C10 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				AC48E7222401490500020B35 /* Protocol */,
+				AC3B770323FF606100211C10 /* Views */,
+				AC3B770523FF607100211C10 /* Interactor */,
+				AC3B770823FF608E00211C10 /* Presenter */,
+				AC3B770623FF607B00211C10 /* Router */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		AC3B770323FF606100211C10 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AC3B77222400680300211C10 /* AddShelfController.h */,
+				AC3B77232400680300211C10 /* AddShelfController.m */,
+				AC3B770B23FF611100211C10 /* BookShelfController.h */,
+				AC3B770C23FF611100211C10 /* BookShelfController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AC3B770523FF607100211C10 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				AC3B770E23FF616300211C10 /* BookShelfInteractor.h */,
+				AC3B770F23FF616300211C10 /* BookShelfInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		AC3B770623FF607B00211C10 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				AC3B771623FF624900211C10 /* BookShelfRouter.h */,
+				AC3B771723FF624900211C10 /* BookShelfRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		AC3B770723FF608500211C10 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				AC3B771923FF633D00211C10 /* BookModel.h */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		AC3B770823FF608E00211C10 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AC3B771123FF61EC00211C10 /* BookShelfPresenter.h */,
+				AC3B771223FF61EC00211C10 /* BookShelfPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		AC3B771C23FF69E600211C10 /* State Machine */ = {
+			isa = PBXGroup;
+			children = (
+				AC3B771D23FFE66400211C10 /* StateMachine.h */,
+				AC3B771E23FFE66400211C10 /* StateMachine.m */,
+			);
+			path = "State Machine";
+			sourceTree = "<group>";
+		};
+		AC48E7222401490500020B35 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				AC3B77202400513900211C10 /* BSInteractorFetcherProtocol.h */,
+				AC48E7252401568000020B35 /* AlertRouter.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC3B76E423FF600700211C10 /* ViperObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC3B76FE23FF600A00211C10 /* Build configuration list for PBXNativeTarget "ViperObjC" */;
+			buildPhases = (
+				AC3B76E123FF600700211C10 /* Sources */,
+				AC3B76E223FF600700211C10 /* Frameworks */,
+				AC3B76E323FF600700211C10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ViperObjC;
+			productName = ViperObjC;
+			productReference = AC3B76E523FF600700211C10 /* ViperObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC3B76DD23FF600700211C10 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Guilherme Martins Dalosto de Oliveira";
+				TargetAttributes = {
+					AC3B76E423FF600700211C10 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = AC3B76E023FF600700211C10 /* Build configuration list for PBXProject "ViperObjC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC3B76DC23FF600700211C10;
+			productRefGroup = AC3B76E623FF600700211C10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC3B76E423FF600700211C10 /* ViperObjC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC3B76E323FF600700211C10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC48E7242401551100020B35 /* BookShelf.storyboard in Resources */,
+				AC3B76F823FF600A00211C10 /* LaunchScreen.storyboard in Resources */,
+				AC3B76F523FF600A00211C10 /* Assets.xcassets in Resources */,
+				AC3B76F323FF600700211C10 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC3B76E123FF600700211C10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC3B771823FF624900211C10 /* BookShelfRouter.m in Sources */,
+				AC3B76EA23FF600700211C10 /* AppDelegate.m in Sources */,
+				AC3B76FB23FF600A00211C10 /* main.m in Sources */,
+				AC3B771F23FFE66400211C10 /* StateMachine.m in Sources */,
+				AC3B77242400680300211C10 /* AddShelfController.m in Sources */,
+				AC3B770D23FF611100211C10 /* BookShelfController.m in Sources */,
+				AC3B76ED23FF600700211C10 /* SceneDelegate.m in Sources */,
+				AC3B771023FF616300211C10 /* BookShelfInteractor.m in Sources */,
+				AC3B77212400513900211C10 /* BSInteractorFetcherProtocol.h in Sources */,
+				AC3B771323FF61EC00211C10 /* BookShelfPresenter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AC3B76F123FF600700211C10 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC3B76F223FF600700211C10 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC3B76F623FF600A00211C10 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC3B76F723FF600A00211C10 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC3B76FC23FF600A00211C10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AC3B76FD23FF600A00211C10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC3B76FF23FF600A00211C10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7YWK9C69PH;
+				INFOPLIST_FILE = ViperObjC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Academy.ViperObjC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC3B770023FF600A00211C10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7YWK9C69PH;
+				INFOPLIST_FILE = ViperObjC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Academy.ViperObjC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC3B76E023FF600700211C10 /* Build configuration list for PBXProject "ViperObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC3B76FC23FF600A00211C10 /* Debug */,
+				AC3B76FD23FF600A00211C10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC3B76FE23FF600A00211C10 /* Build configuration list for PBXNativeTarget "ViperObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC3B76FF23FF600A00211C10 /* Debug */,
+				AC3B770023FF600A00211C10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC3B76DD23FF600700211C10 /* Project object */;
+}
