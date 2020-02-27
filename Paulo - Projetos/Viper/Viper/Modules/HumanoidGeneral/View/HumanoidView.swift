@@ -14,6 +14,7 @@ class HumanoidView: UIViewController {
     private let ui = HumanoidViewUI()
     private var presenter: HumanoidPresenterProtocol!
     private var object: HumanoidEntity?
+    var t = [Character?](repeating: nil, count: 3)
     // MARK: - Outlets
     // Strength:
     @IBOutlet var staticStrLabel: UILabel!
